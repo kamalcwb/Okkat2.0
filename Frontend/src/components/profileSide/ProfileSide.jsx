@@ -7,8 +7,8 @@ import styles from '../profileSide/ProfileSide.module.css'
 const ProfileSide = () => {
     return (
         <div className={styles.profileSide}>
-            <ProfileCard />
             <LogoSearch />
+            <ProfileCard />
             <FollowersCard />
         </div>
     )

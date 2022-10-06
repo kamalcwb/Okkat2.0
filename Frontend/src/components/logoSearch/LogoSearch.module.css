@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(106.26deg, #f99827, #f95f35 100%);
+    background: linear-gradient(106.26deg, #f17de1 0%, #d81d99 100%);
     border-radius: 5px;
     padding: 4px;
     color: white;
@@ -28,4 +28,12 @@
 
 .searchIcon :hover {
     cursor: pointer;
+}
+
+.logo {
+    font-family: 'pollyana';
+    color: var(--pink);
+    font-weight: bolder;
+    font-size: 26px;
+    align-self: center;
 }

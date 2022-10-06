@@ -53,7 +53,7 @@
 
 .fcbutton:hover {
     cursor: pointer;
-    color: var(--orange);
+    color: var(--pink);
     background: transparent;
-    border: 2px solid var(--orange);
+    border: 2px solid var(--pink);
 }
