@@ -6,23 +6,23 @@ import postPic3 from '../img/postpic3.JPG'
 export const PostsData = [
     {
         img: postPic1,
-        name: 'Tzuyu',
-        desc: "Happy New Year all friends! #2023",
+        name: 'Rafaela Ferreira',
+        desc: "Feliz ano novo a todos",
         likes: 2300,
         liked: true
     },
     {
         img: postPic2,
-        name: 'Maryam',
-        desc: "Party time :)",
+        name: 'Maria Castanho',
+        desc: "Hora da festa :)",
         likes: 2300,
         liked: false
 
     },
     {
-        img:postPic3,
-        name: "Salena Gomez",
-        desc: "At Archery Festival",
+        img: postPic3,
+        name: "Suelen Coutinho",
+        desc: "No festival <3",
         likes: 800,
         liked: false
     }
