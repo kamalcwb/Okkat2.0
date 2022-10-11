@@ -17,7 +17,7 @@ const Post = ({ data }) => {
             <span>{data.likes} likes</span>
             <div className={styles.detail}>
                 <span><b>{data.name}</b></span>
-                <span>{data.desc}</span>
+                <span> {data.desc}</span>
             </div>
         </div>
     )

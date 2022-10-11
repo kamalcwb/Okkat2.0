@@ -42,3 +42,21 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+/* .button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border:none;
+  border-radius: 0.5rem;
+  background: var(--buttonBg);
+  transition:all 100ms ease-out;
+}
+
+.button:hover{
+  cursor: pointer;
+  color: var(--pink);
+  background: transparent;
+  border: 2px solid var(--pink);
+} */
