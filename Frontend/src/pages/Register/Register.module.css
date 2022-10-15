@@ -1,0 +1,35 @@
+.register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 4rem;
+    position: relative;
+}
+
+.register>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    gap: 2rem;
+}
+
+.webname {
+
+    background-size: 100%;
+
+}
+
+.webname>h1 {
+    font-size: 3rem;
+    font-family: pollyanna;
+    color: var(--pink);
+}
+
+.webname>h6 {
+    font-size: 2rem;
+
+}
