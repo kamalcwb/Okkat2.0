@@ -6,13 +6,8 @@ const Register = () => {
         <div className={styles.register}>
             <div className={styles.left}>
                 <div className={styles.webname}>
-                    <div className={styles.logo}>
-                        <h1>okkat</h1>
-                    </div>
-                    <div className={styles.info}>
-                        <h6>Conecte-se com o mundo</h6>
-                    </div>
-
+                    <span className={styles.logo}>okkat</span>
+                    <p className={styles.info}>Conecte-se com o mundo</p>
                 </div>
             </div>
             <SignUp />
