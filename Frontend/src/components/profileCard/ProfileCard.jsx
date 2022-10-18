@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../profileCard/ProfileCard.module.css'
 import coverImg from '../../img/cover.jpg'
-import profileImg from '../../img/profileImg.jpg'
+import profileImg from '../../img/profileImg2.jpg'
 
 const ProfileCard = () => {
     const profilePage = true;
@@ -13,7 +13,7 @@ const ProfileCard = () => {
             </div>
 
             <div className={styles.profileName}>
-                <span>Amanda Hashirama</span>
+                <span>Taisa Sousa</span>
                 <span>Franca, SP</span>
             </div>
 
