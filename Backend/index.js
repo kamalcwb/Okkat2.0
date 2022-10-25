@@ -2,6 +2,7 @@ import express from "express"
 import bodyParser from "body-parser"
 import mongoose from "mongoose"
 import dotenv from "dotenv"
+import cors from "cors"
 import AuthRoute from "./routes/auth-route.js"
 import UserRoute from "./routes/user-route.js"
 import PostRoute from "./routes/post-route.js"
@@ -9,6 +10,7 @@ import PostRoute from "./routes/post-route.js"
 //Routes
 
 const app = express()
+app.use(cors())
 
 //Middleware
 app.use(bodyParser.json({ limit: '30mb', extended: true }))
