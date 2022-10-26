@@ -1,6 +1,6 @@
 import styles from "./App.module.css"
-// import Login from "./pages/Login/Login";
-import Register from "./pages/Register/Register";
+import Login from "./pages/Login/Login";
+// import Register from "./pages/Register/Register";
 // import Home from "./pages/Home/Home.jsx"
 // import Profile from "./pages/Profile/Profile";
 function App() {
@@ -10,8 +10,8 @@ function App() {
       <div className={styles.blur} style={{ top: '36%', left: '-8rem' }}></div>
       {/* <Home /> */}
       {/* <Profile /> */}
-      <Register />
-      {/* <Login /> */}
+      {/* <Register /> */}
+      <Login />
     </div>
   );
 }

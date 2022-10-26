@@ -34,10 +34,10 @@ export const loginUser = async (req, res) => {
         if (email) {
             const validity = await bcrypt.compare(password, user.password)
 
-            validity ? res.status(200).send(user) : res.status(400).json("Email ou Senha incorretos")
+            validity ? res.status(200).send(user) : res.status(400).json({ error: "Verifique seu email e senha" })
         }
         else {
-            res.status(404).json("Email não cadastrado")
+            res.status(404).json({ error: "Verifique seu email e senha" })
         }
     } catch (error) {
         res.status(500).send({ message: error.message })
