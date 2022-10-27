@@ -77,11 +77,7 @@ const Login = () => {
           <div className={styles.login}>
             <span>Ainda não tem uma conta? <a href='/register'>Criar conta</a></span>
           </div>
-          <button
-            type='submit'
-            className={styles.button}>
-            Entrar
-          </button>
+          <button type='submit' className={styles.button}>Entrar</button>
           {msg.type === 'success' ? <span style={{ color: "green" }}>{msg.message}</span> : ""}
           {msg.type === 'error' ? <span style={{ color: "#ff0000" }}>{msg.message}</span> : ""}
         </form>

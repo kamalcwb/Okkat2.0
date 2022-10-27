@@ -1,0 +1,53 @@
+import React from 'react'
+import styles from '../profileCard/ProfileCard.module.css'
+import coverImg from '../../img/cover.jpg'
+import profileImg from '../../img/profileImg2.jpg'
+
+const ProfileCard = () => {
+    const profilePage = true;
+    return (
+        <div className={styles.profileCard}>
+            <div className={styles.profileImages}>
+                <img src={coverImg} alt='' />
+                <img src={profileImg} alt='' />
+            </div>
+
+            <div className={styles.profileName}>
+                <span>Taisa Sousa</span>
+                <span>Franca, SP</span>
+            </div>
+
+            <div className={styles.followStatus}>
+                <hr />
+                <div>
+                    <div className={styles.follow}>
+                        <span>138</span>
+                        <span>Seguindo</span>
+                    </div>
+                    <div className={styles.vl}></div>
+                    <div className={styles.follow}>
+                        <span>6,456</span>
+                        <span>Seguidores</span>
+                    </div>
+                    {profilePage && (
+                        <>
+                            <div className={styles.vl}>
+
+                            </div>
+                            <div className={styles.follow}>
+                                <span>3</span>
+                                <span>Posts</span>
+                            </div>
+                        </>
+                    )}
+                </div>
+                <hr />
+            </div>
+            {profilePage ? '' : <span>
+                Meu Perfil
+            </span>}
+        </div>
+    )
+}
+
+export default ProfileCard

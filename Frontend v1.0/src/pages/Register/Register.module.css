@@ -1,0 +1,107 @@
+.register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 4rem;
+    position: relative;
+}
+
+.register>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    gap: 2rem;
+}
+
+.webname {
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.logo {
+    font-size: 184px;
+    font-family: pollyanna;
+    color: var(--pink);
+
+}
+
+.info {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.infoForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--cardColor);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.infoForm>div {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoInput {
+    border: none;
+    outline: none;
+    background-color: var(--inputColor);
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+}
+
+.infoForm>div {
+    display: flex;
+    gap: 1rem;
+    height: 2rem;
+}
+
+.button {
+    height: 2rem;
+    width: 6rem;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--buttonBg);
+    transition: all 100ms ease-out;
+}
+
+.button:hover {
+    cursor: pointer;
+    color: var(--pink);
+    background: transparent;
+    border: 2px solid var(--pink);
+}
+
+.authForm {
+    background-color: var(--cardColor);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.login {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.login>span>a {
+    color: blue;
+}

@@ -1,0 +1,37 @@
+.rightSide {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.navIcons {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
+.navIcons img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--buttonBg);
+    transition: all 100ms ease-out;
+    height: 3rem;
+    width: 80%;
+    align-self: center;
+}
+
+.button:hover {
+    cursor: pointer;
+    color: var(--pink);
+    background: transparent;
+    border: 2px solid var(--pink);
+}
