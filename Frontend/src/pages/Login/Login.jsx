@@ -75,7 +75,7 @@ const Login = () => {
             />
           </div>
           <div className={styles.login}>
-            <span>Ainda não tem uma conta? <a href='/login'>Criar conta</a></span>
+            <span>Ainda não tem uma conta? <a href='/register'>Criar conta</a></span>
           </div>
           <button type='submit' className={styles.button}>Entrar</button>
           {msg.type === 'success' ? <span style={{ color: "green" }}>{msg.message}</span> : ""}
