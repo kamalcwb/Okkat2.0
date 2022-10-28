@@ -17,7 +17,16 @@ export const registerUser = async (req, res) => {
     })
 
     try {
-        await newUser.save()
+        const hasUser = await UserModel.findOne({ email })
+        if (hasUser) {
+            return res.status(400).json({ error: "Email já cadastrado" })
+        }
+        const user = await newUser.save()
+        const token = jwt.sign({
+            username: user.username,
+            id: user._id,
+            email: user.email
+        }, process.env.JWT_KEY, { expiresIn: '6h' })
         res.status(200).json(newUser)
     }
     catch (error) {

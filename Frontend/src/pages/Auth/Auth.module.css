@@ -107,6 +107,11 @@
   border: 2px solid var(--pink);
 }
 
+.button:disabled {
+  background-color: silver;
+  pointer-events: none;
+}
+
 .authForm {
   background-color: var(--cardColor);
   border-radius: 1rem;

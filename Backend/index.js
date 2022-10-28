@@ -6,6 +6,7 @@ import cors from "cors"
 import AuthRoute from "./routes/auth-route.js"
 import UserRoute from "./routes/user-route.js"
 import PostRoute from "./routes/post-route.js"
+import UploadRoute from "./routes/upload-route.js"
 
 //Routes
 
@@ -27,3 +28,4 @@ mongoose.connect(process.env.MONGO_DB,
 app.use('/auth', AuthRoute)
 app.use('/user', UserRoute)
 app.use('/post', PostRoute)
+app.use('/upload', UploadRoute)
