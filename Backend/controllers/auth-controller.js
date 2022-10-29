@@ -27,7 +27,7 @@ export const registerUser = async (req, res) => {
             id: user._id,
             email: user.email
         }, process.env.JWT_KEY, { expiresIn: '6h' })
-        res.status(200).json(newUser)
+        res.status(200).json({ user, token })
     }
     catch (error) {
         res.status(500).json({ error: error.message })

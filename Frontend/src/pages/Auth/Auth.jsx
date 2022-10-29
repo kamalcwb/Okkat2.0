@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 
 const Auth = () => {
   const initialState = {
-    firstname: "",
-    lastname: "",
+    name: "",
+    lastName: "",
     username: "",
     email: "",
     password: "",
@@ -65,8 +65,8 @@ const Auth = () => {
                 type="text"
                 placeholder="Nome"
                 className={styles.infoInput}
-                name="firstname"
-                value={data.firstname}
+                name="name"
+                value={data.name}
                 onChange={handleChange}
               />
               <input
@@ -74,8 +74,8 @@ const Auth = () => {
                 type="text"
                 placeholder="Sobrenome"
                 className={styles.infoInput}
-                name="lastname"
-                value={data.lastname}
+                name="lastName"
+                value={data.lastName}
                 onChange={handleChange}
               />
             </div>
