@@ -5,13 +5,22 @@ const postSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    desc: String,
+    desc: {
+        type: String,
+        required: true
+    },
     likes: [],
+    createdAt: {
+        type: Date,
+        default: new Date(),
+    },
     image: String,
 },
     {
-        timestamps: true
-    })
+        timestamps: true,
+    }
+);
 
-const PostModel = mongoose.model("posts", postSchema)
-export default PostModel
+var PostModel = mongoose.model("Posts", postSchema);
+
+export default PostModel;

@@ -31,5 +31,5 @@ mongoose.connect(process.env.MONGO_DB,
 
 app.use('/auth', AuthRoute)
 app.use('/user', UserRoute)
-app.use('/post', PostRoute)
+app.use('/posts', PostRoute)
 app.use('/upload', UploadRoute)

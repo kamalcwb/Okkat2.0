@@ -15,15 +15,13 @@ export const createPost = async (req, res) => {
 }
 
 export const getPost = async (req, res) => {
-    const id = req.params.id
+    const id = req.params.id;
 
     try {
-        const post = await PostModel.findById(id)
-        res.status(200).json(post)
-
-    }
-    catch (error) {
-        res.status(500).json(error)
+        const post = await PostModel.findById(id);
+        res.status(200).json(post);
+    } catch (error) {
+        res.status(500).json(error);
     }
 }
 
@@ -83,41 +81,41 @@ export const likePost = async (req, res) => {
     }
 }
 
-export const getTimeLinePosts = async (req, res) => {
+export const getTimelinePosts = async (req, res) => {
     const userId = req.params.id
-
     try {
-        const currentUserPosts = await PostModel.find({ userId: userId })
+        const currentUserPosts = await PostModel.find({ userId: userId });
+
         const followingPosts = await UserModel.aggregate([
             {
                 $match: {
-                    _id: new mongoose.Types.ObjectId(userId)
-                }
+                    _id: new mongoose.Types.ObjectId(userId),
+                },
             },
             {
                 $lookup: {
                     from: "posts",
                     localField: "following",
                     foreignField: "userId",
-                    as: "followingPosts"
-                }
+                    as: "followingPosts",
+                },
             },
             {
                 $project: {
                     followingPosts: 1,
-                    _id: 0
-                }
-            }
+                    _id: 0,
+                },
+            },
         ])
 
-        res.status(200).json(currentUserPosts.concat(...followingPosts[0].followingPosts)
-            .sort((a, b) => {
-                return b.createdAt - a.createdAt
-            })
+        res.status(200).json(
+            currentUserPosts
+                .concat(...followingPosts[0].followingPosts)
+                .sort((a, b) => {
+                    return new Date(b.createdAt) - new Date(a.createdAt);
+                })
         )
-
-    }
-    catch (error) {
-        res.status(500).json(error)
+    } catch (error) {
+        res.status(500).json(error);
     }
 }
