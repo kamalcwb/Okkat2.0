@@ -1,5 +1,5 @@
-import React from 'react'
-import { useState } from 'react'
+import { useState, React } from 'react'
+import { Link } from 'react-router-dom'
 import styles from './RightSide.module.css'
 import Home from '../../img/home.png'
 import Noti from '../../img/noti.png'
@@ -15,7 +15,8 @@ const RightSide = () => {
     return (
         <div className={styles.rightSide}>
             <div className={styles.navIcons}>
-                <img src={Home} alt='' />
+                <Link to={'../home'}><img src={Home} alt='' /></Link>
+
                 <UilSetting />
                 <img src={Noti} alt='' />
                 <img src={Comment} alt='' />

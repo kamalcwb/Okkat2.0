@@ -16,7 +16,7 @@ const Post = ({ data }) => {
     const handleLike = () => {
         setLiked((prev) => !prev)
         likedPost(data._id, user._id)
-        liked ? setLiked((prev) => prev - 1) : setLikes((prev) => prev + 1)
+        liked ? setLikes((prev) => prev - 1) : setLikes((prev) => prev + 1)
     }
     return (
         <div className={styles.post}>

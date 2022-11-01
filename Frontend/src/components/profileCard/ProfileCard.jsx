@@ -1,52 +1,60 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 import styles from '../profileCard/ProfileCard.module.css'
-import coverImg from '../../img/cover.jpg'
-import profileImg from '../../img/profileImg2.jpg'
 
-const ProfileCard = () => {
-    const profilePage = true;
+const ProfileCard = (location) => {
+    const { user } = useSelector((state) => state.authReducer.authData)
+    const posts = useSelector((state) => state.postReducer.posts)
+    const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER
+
     return (
         <div className={styles.profileCard}>
             <div className={styles.profileImages}>
-                <img src={coverImg} alt='' />
-                <img src={profileImg} alt='' />
+                <img src={user.coverPicture ? serverPublic + user.coverPicture : serverPublic + "defaultCover.jpg"} alt='' />
+                <img src={user.profilePicture ? serverPublic + user.profilePicture : serverPublic + "defaultProfile.jpg"} alt='' />
             </div>
 
             <div className={styles.profileName}>
-                <span>Taisa Sousa</span>
-                <span>Franca, SP</span>
+                <span>{user.name} {user.lastName}</span>
+                <span>{user.worksAt ? user.worksAt : ""}</span>
+                <span>{user.livesIn}</span>
             </div>
 
             <div className={styles.followStatus}>
                 <hr />
                 <div>
                     <div className={styles.follow}>
-                        <span>138</span>
+                        <span>{user.following.length}</span>
                         <span>Seguindo</span>
                     </div>
                     <div className={styles.vl}></div>
                     <div className={styles.follow}>
-                        <span>6,456</span>
+                        <span>{user.followers.length}</span>
                         <span>Seguidores</span>
                     </div>
-                    {profilePage && (
+                    {location === 'profilePage' && (
                         <>
-                            <div className={styles.vl}>
-
-                            </div>
+                            <div className={styles.vl}></div>
                             <div className={styles.follow}>
-                                <span>3</span>
+                                <span>{
+                                    posts.filter((post) => post.userId === user._id).length
+                                }</span>
                                 <span>Posts</span>
-                            </div>
+                            </div>{" "}
                         </>
                     )}
                 </div>
                 <hr />
             </div>
-            {profilePage ? '' : <span>
-                Meu Perfil
-            </span>}
-        </div>
+            {location === 'profilePage' ? ('') : (
+                <span>
+                    <Link to={`/profile/${user._id}`} style={{ textDecoration: "none", color: "inherit" }}>
+                        Meu Perfil
+                    </Link>
+                </span>
+            )}
+        </div >
     )
 }
 
