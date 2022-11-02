@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import styles from '../profileCard/ProfileCard.module.css'
 
-const ProfileCard = (location) => {
+const ProfileCard = ({ location }) => {
     const { user } = useSelector((state) => state.authReducer.authData)
     const posts = useSelector((state) => state.postReducer.posts)
     const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER
@@ -47,7 +47,9 @@ const ProfileCard = (location) => {
                 </div>
                 <hr />
             </div>
-            {location === 'profilePage' ? ('') : (
+            {location === 'profilePage' ? (
+                ''
+            ) : (
                 <span>
                     <Link to={`/profile/${user._id}`} style={{ textDecoration: "none", color: "inherit" }}>
                         Meu Perfil
