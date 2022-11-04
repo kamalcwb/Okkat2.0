@@ -38,9 +38,9 @@ const InfoCard = () => {
         <div className={styles.infoCard}>
             <div className={styles.infoHead}>
                 <h4>Informações do Perfil</h4>
-                {user._idv === profileUserId ? (<div>
+                {user._id === profileUserId ? (<div>
                     <UilPen width='2rem' height='1.2rem' onClick={() => setModalOpen(true)} />
-                    <ProfileModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
+                    <ProfileModal modalOpen={modalOpen} setModalOpen={setModalOpen} data={user} />
                 </div>
                 ) : (
                     ''
