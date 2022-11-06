@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { followUser, unfollowUser } from '../../actions/userAction'
 import styles from './User.module.css'
 
 const User = ({ person }) => {
+    const dispatch = useDispatch()
     const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER
+    const { user } = useSelector((state) => state.authReducer.authData)
+    const [following, setFollowing] = useState(person.followers.includes(user._id))
 
     const handleFollow = () => {
-
+        following ?
+            dispatch(
+                unfollowUser(person._id, user)
+            ) : dispatch(followUser(person._id, user))
+        setFollowing((prev) => !prev)
     }
 
     return (
@@ -18,7 +27,7 @@ const User = ({ person }) => {
                 </div>
             </div>
             <button className={styles.fcbutton} onClick={handleFollow}>
-                Follow
+                {following ? "Não seguir" : "Seguir"}
             </button>
         </div>
     )
