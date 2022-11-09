@@ -24,16 +24,17 @@ const Post = ({ data }) => {
                 src={data.image ? process.env.REACT_APP_PUBLIC_FOLDER + data.image : ""}
                 alt=""
             />
+            <div className={styles.detail}>
+                <span><b>{data.name}</b></span>
+                <span> {data.desc}</span>
+            </div>
             <div className={styles.postReact}>
                 <img src={liked ? Heart : NotLike} alt='' style={{ cursor: "pointer" }} onClick={handleLike} />
                 <img src={Comment} alt='' />
                 <img src={Share} alt='' />
             </div>
             <span style={{ color: "var(--gray)", fontSize: "12px" }}>{likes} likes</span>
-            <div className={styles.detail}>
-                <span><b>{data.name}</b></span>
-                <span> {data.desc}</span>
-            </div>
+
         </div >
     )
 }

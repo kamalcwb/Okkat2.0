@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 import styles from '../followersCard/FollowersCard.module.css'
 import User from '../user/User'
 
-// import { followers } from '../../Data/FollowersData'
 import { getAllUser } from '../../api/UserRequest'
 
 

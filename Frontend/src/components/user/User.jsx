@@ -20,7 +20,7 @@ const User = ({ person }) => {
     return (
         <div className={styles.follower}>
             <div>
-                <img src={person.coverPicture ? serverPublic + person.profilePicture : serverPublic + "defaultProfile.jpg"} alt="" className={styles.followerImage} />
+                <img src={person.profilePicture ? serverPublic + person.profilePicture : serverPublic + "defaultProfile.jpg"} alt="" className={styles.followerImage} />
                 <div className={styles.name}>
                     <span>{person.name}</span>
                     <span>@{person.username}</span>

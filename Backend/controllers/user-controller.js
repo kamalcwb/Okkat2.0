@@ -47,9 +47,8 @@ export const updateUser = async (req, res) => {
 
             const user = await UserModel.findByIdAndUpdate(id, req.body, { new: true })
             const token = jwt.sign({
-                username: user.username,
+                email: user.email,
                 id: user._id,
-                email: user.email
             }, process.env.JWT_KEY, { expiresIn: '6h' }
             )
 
