@@ -50,12 +50,13 @@ function ProfileModal({ modalOpen, setModalOpen, data }) {
             data.append("name", fileName)
             data.append("file", coverImg)
             userData.coverPicture = fileName
+            try {
+                dispatch(uploadImage(data))
+            } catch (error) {
+                console.log(error)
+            }
         }
-        try {
-            dispatch(uploadImage(data))
-        } catch (error) {
-            console.log(error)
-        }
+
         dispatch(updateUser(param.id, userData))
         setModalOpen(false)
     }
