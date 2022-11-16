@@ -6,7 +6,7 @@
 >Status: :construction: :construction: :construction:EM DESENVOLVIMENTO :construction: :construction: :construction:
 
 
-### É uma rede social desenvolvida com ReactJS no frontend, utilizando axios para requisições para a API e Redux para gerenciamento de componentes e seção de usuário, o backend foi desenvolvido com Node.JS em conjunto com Express, Bcrypt para a cryptografia da senha, JWT para o token de autenticação, Mogoose para a modelagem de dados e Multer para upload de fotos enviadas.
+### É uma rede social desenvolvida com ReactJS no Frontend, utilizando Axios para requisições para a API e Redux para gerenciamento de componentes e seção de usuário, o Backend foi desenvolvido com Node.JS em conjunto com Express, Bcrypt para a cryptografia da senha, JWT para o token de autenticação, Mongoose para a modelagem de dados e Multer para upload de fotos enviadas.
 
 ## Algumas seções da rede:
 
