@@ -2,9 +2,8 @@
 
 # dependencies
 Frontend/node_modules
-Frontend v1.0/node_modules
 Backend/node_modules
-Backend v1.0/node_modules
+
 /.pnp
 .pnp.js
 

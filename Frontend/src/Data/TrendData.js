@@ -1,26 +1,26 @@
 export const TrendData = [
   {
-    name: "Minions",
+    name: "Torneio do Poder",
     shares: 97,
   },
   {
-    name: "Os Vingdores",
+    name: "Melhor lutador da Terra",
     shares: 80.5,
   },
   {
-    name: "Filmes",
+    name: "Como acalmar um gato pistola com pudim",
     shares: 75.5,
   },
   {
-    name: "Reactjs",
+    name: "Esferas do Dragão",
     shares: 72,
   },
   {
-    name: "Kamal Kaminski",
+    name: "Vai Universo Sete",
     shares: 71.9,
   },
   {
-    name: "Need for Speed",
+    name: "Como plantar semente dos Deuses em casa",
     shares: 20,
   },
 ];

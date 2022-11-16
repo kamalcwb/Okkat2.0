@@ -28,7 +28,7 @@ const InfoCard = () => {
             }
         }
         fetchProfileUser()
-    }, [user])
+    }, [profileUserId, user])
 
     const handleLogout = () => {
         dispatch(logOut())
